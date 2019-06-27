@@ -2,9 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
 import 'model/model_bean.dart';
-import 'widget/charging.dart';
+import 'widget/card.dart';
+import 'widget/grid_view.dart';
+import 'widget/list_tile.dart';
+import 'widget/row_column.dart';
 import 'widget/layout.dart';
 import 'widget/login.dart';
+import 'widget/stack.dart';
 
 void main() {
 //  debugPaintSizeEnabled = true;
@@ -69,7 +73,11 @@ class _MyHomePageState extends State<MyHomePage> {
   void initState() {
     _list.add(ModelBean("登录", Login(), false));
     _list.add(ModelBean("布局", Layout(), false));
-    _list.add(ModelBean("Charging", Charging(), false));
+    _list.add(ModelBean("RowColumn", RowColumn(), false));
+    _list.add(ModelBean("GridView", GridViewWidget(), false));
+    _list.add(ModelBean("Stack", StackWidget(), false));
+    _list.add(ModelBean("Card", CardWidget(), false));
+    _list.add(ModelBean("ListTile", ListTileWidget(), false));
     super.initState();
   }
 
